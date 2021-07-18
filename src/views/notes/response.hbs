@@ -1,0 +1,48 @@
+<div class="col-md-12 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Response</h3>
+        </div>
+        <div class="card-body">
+            {{#if respuesta2}}
+            <p>No data found</p>
+
+            {{else}}
+                           <div class="table-responsive">
+                    <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                        <thead>
+                            <tr align="center">
+                                <th>Player 1</th>
+                                <th>Player 2</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each respuesta}}
+                            <tr>
+                                <td align="left"> {{first_name1}} {{last_name1}}  height: {{height1}}  </td>
+                                <td align="left"> {{first_name2}} {{last_name2}}  height: {{height2}}  </td>
+                                <td align="left"> {{total}} </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        <tfoot>
+                            <tr align="center">
+                                <th>Player 1</th>
+                                <th>Player 2</th>
+                                <th>Total</th>
+                            </tr>
+                        </tfoot>
+
+                    </table>
+
+                </div>
+            {{/if}}
+
+        </div>
+    </div>
+</div>
+<br>
+<div class="">
+    <a href="/" class="btn btn-primary btn-lg">Return</a>
+</div>
